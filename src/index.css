@@ -1,14 +1,127 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e2d9d9;
+  padding: 20px;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Article list container */
+.article-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+  padding: 0;
+}
+
+/* Individual article styling */
+.each-article {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(239, 13, 13, 0.1);
+  margin: 10px;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .each-article {
+    width: 48%;
+  }
+}
+
+@media (min-width: 768px) {
+  .each-article {
+    width: 31.33%;
+  }
+}
+
+/* Article image */
+.article-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Article content container */
+.article-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+}
+
+/* Article title */
+.article-title {
+  font-size: 1.5em;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Article body */
+.article-body {
+  font-size: 1em;
+  margin: 10px 0;
+  text-align: justify;
+}
+
+/* Article topic */
+.article-topic {
+  font-size: 1.2em;
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Article created at */
+.article-created-at {
+  font-size: 0.9em;
+  margin: 5px 0;
+  color: #888;
+}
+
+/* Article votes */
+.article-votes {
+  font-size: 1em;
+  margin: 5px 0;
+  color: #333;
+}
+
+/* Article comment count */
+.article-comment_count {
+  font-size: 0.9em;
+  margin: 5px 0;
+  color: #777;
+}
+
+.each-article:hover {
+  transform: scale(1.05);
+}
+nav {
+  display: flex;
+  justify-content: end;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav a {
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #160808;
+  color: white;
+  border-right: 1px solid #bbb;
+}
+nav a:hover {
+  background-color: #1e294f;
+}
+nav a.active {
+  background: var(rgb(188, 60, 38));
 }
