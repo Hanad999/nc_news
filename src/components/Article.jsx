@@ -15,6 +15,7 @@ export default function Article() {
           alt={article.title}
         />
         <h2 className="each-article-title">Title: {article.title}</h2>
+        <p className="each-article-body">{article.body}</p>
         <h3 className="each-article-topic">Topic: {article.topic}</h3>
         <h4 className="each-article-created-at">
           Created: {article.created_at}

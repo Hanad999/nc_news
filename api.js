@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://black-hole-bwuf.onrender.com/api",
+  baseURL: "https://nc-news-ida7.onrender.com/api",
 });
 
 export const fetchArticles = () => {

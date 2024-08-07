@@ -125,38 +125,3 @@ nav a:hover {
 nav a.active {
   background: var(rgb(188, 60, 38));
 }
-
-/* Article Card */
-.each-article-card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin: 15px;
-  max-width: 300px;
-}
-
-.each-article-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
-}
-
-.each-article-content {
-  padding: 20px;
-}
-
-.each-article-title {
-  margin-bottom: 10px;
-  font-size: 1.5em;
-}
-
-.each-article-topic,
-.each-article-created-at,
-.each-article-votes,
-.each-article-comment-count {
-  margin-bottom: 10px;
-  color: grey;
-}
