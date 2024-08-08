@@ -27,11 +27,12 @@ function App() {
           <Route path="/articles" element={<Articles />} />
           <Route path="/topics" element={<Topics />} />
           <Route path="/articles/:article_id" element={<Article />} />
-          <Route path="/articles/:article_id/comments" element={<Comments />} />
+          <Route path="/articles/:article_id/comments" element ={<Comments/>}>
           <Route
-            path="/articles/:article_id/addcomment"
+            path="/articles/:article_id/comments/addcomment"
             element={<AddComments />}
           />
+          </Route>
           <Route path="/users" element={<Users />} />
           <Route path="/account" element={<Account />} />
           <Route path="/articles/search" element={<Search />} />

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 import { fetchAllComments } from "../../api";
 import { Link } from "react-router-dom";
 import Article from "./Article";
@@ -28,9 +28,10 @@ export default function Comments() {
             );
           })}
         </ol>
-        <Link to={`/articles/${article_id}/addcomment`} className="add-comment">
+        <Link to={`/articles/${article_id}/comments/addcomment`} className="add-comment">
           Add comment
         </Link>
+        <Outlet/>
       </section>
     </>
   );
