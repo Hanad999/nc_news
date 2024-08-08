@@ -14,9 +14,8 @@ import Users from "./components/Users";
 import Search from "./components/Search";
 import Topics from "./components/Topics";
 import Account from "./components/Account";
-import ArticleSearch from "./components/ArticleSearch";
 function App() {
-  const [search,setSearch] = useState()
+  const [search, setSearch] = useState();
   return (
     <>
       <Header />
@@ -37,7 +36,6 @@ function App() {
           <Route path="/account" element={<Account />} />
           <Route path="/articles/search" element={<Search />} />
         </Routes>
-        <ArticleSearch setSearch={setSearch} />
       </main>
     </>
   );

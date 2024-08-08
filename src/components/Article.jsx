@@ -1,11 +1,17 @@
 import { useParams } from "react-router-dom";
-import { fetchArticleById } from "../../api";
+import { addVote, fetchArticleById } from "../../api";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 export default function Article() {
   const [article, setArticle] = useState([]);
+  const [vote, setVote] = useState(0);
   const { article_id } = useParams();
   fetchArticleById(article_id).then((response) => setArticle(response));
+  function handleClick() {
+    return addVote(article_id).then((response) =>
+      setVote((currentVote) => currentVote + 1)
+    );
+  }
   return (
     <>
       <section className="each-article-card">
@@ -24,6 +30,14 @@ export default function Article() {
         <h6 className="each-article-comment_count">
           Comment Count: {article.comment_count}
         </h6>
+        <button onClick={handleClick}>Add Vote</button>
+        <br />
+        <Link
+          to={`/articles/${article.article_id}/comments`}
+          className="article-body"
+        >
+          View Comments
+        </Link>
       </section>
     </>
   );
